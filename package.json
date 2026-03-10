@@ -1,0 +1,23 @@
+{
+  "name": "live_wallpaper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^40.8.0",
+    "hls.js": "^1.6.15",
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "fs-extra": "^11.3.4"
+  }
+}

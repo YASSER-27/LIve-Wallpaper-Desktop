@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Wallpaper Y7</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="snow-elegance">
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <div class="logo-icon"></div>
+                <h1>Live Wallpaper</h1>
+            </div>
+
+            <nav class="nav-menu">
+                <div class="nav-item active" data-view="home">
+                    <span class="icon"></span>
+                    <span>Home</span>
+                </div>
+                <div class="nav-item" data-view="settings">
+                    <span class="icon"></span>
+                    <span>Settings</span>
+                </div>
+            </nav>
+
+            <!-- CURRENTLY ACTIVE Preview moved to Sidebar -->
+            <div class="preview-card sidebar-preview">
+                <div class="preview-media">
+                    <video id="preview-video" autoplay muted loop class="hidden"></video>
+                    <img id="preview-image" class="hidden" alt="Preview">
+                    <div id="no-preview" class="no-preview">No active wallpaper</div>
+                </div>
+                <div class="preview-info">
+                    <span class="badge">ACTIVE</span>
+                    <h3 id="active-name">None</h3>
+                    <p id="active-type">Ready</p>
+                </div>
+            </div>
+
+            <button id="import-media" class="import-btn">
+                <span class="plus">+</span> Import Media
+            </button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home View -->
+            <div id="home-view" class="view-panel active" style="padding-top: 50px;">
+                <div class="section-header">
+                    <h3>Your Collection</h3>
+                </div>
+
+                <div class="scroll-container">
+                    <div id="media-grid" class="media-grid">
+                        <!-- Grid items will be injected here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings View -->
+            <div id="settings-view" class="view-panel" style="padding-top: 50px;">
+                <div class="section-header">
+                    <h3 style="font-size: 24px; margin-bottom: 20px;">Settings</h3>
+                </div>
+                <div class="settings-list">
+                    <div class="settings-group">
+                        <h3>General</h3>
+                        <div class="settings-item">
+                            <div class="item-info">
+                                <h4>Start with Windows</h4>
+                                <p>Launch automatically when you sign in</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="startup-toggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-group">
+                        <h3>Effects</h3>
+                        <div class="settings-item vertical">
+                            <div class="item-info">
+                                <h4>Wallpaper Blur</h4>
+                                <p>Apply a soft blur effect to your background</p>
+                            </div>
+                            <div class="range-container">
+                                <input type="range" id="blur-slider" min="0" max="20" value="0">
+                                <span id="blur-value">0px</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Bar -->
+            <footer class="status-bar">
+                <div class="status-left">
+                    <span id="status-text">Ready</span>
+                    <span class="branding"
+                        style="margin-left: 15px; font-weight: 700; color: var(--accent-color);">YASSER_27</span>
+                </div>
+                <span class="version">v1.2.0</span>
+            </footer>
+        </main>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>
